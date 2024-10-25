@@ -4,3 +4,8 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+}
