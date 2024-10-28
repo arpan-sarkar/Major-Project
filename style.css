@@ -24,8 +24,15 @@ header{
     align-items: center;
     justify-content: space-between;
 }
+
+.nav-list.active {
+    display: flex;
+  }
+
 .nav-list{
     display: none;
+    flex-direction: column;
+    background-color: #222121;
 }
 .nav-list:hover{
     cursor: pointer;
@@ -158,7 +165,9 @@ footer{
         display: none;
     }
     .nav-list{
-        display: block;
+        /* display: block; */
+        display: flex;
+        flex-direction: row;
     }
 }
 @media only screen and (max-width: 600px){
