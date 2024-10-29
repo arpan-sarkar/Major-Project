@@ -111,7 +111,15 @@ ol li, ul li{
 h2{
     margin-left: -8px;
 }
-
+footer{
+    padding: 20px;
+    background-color: #222121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-top: 10px;
+}
 
 
 
