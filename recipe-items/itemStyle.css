@@ -7,7 +7,7 @@
 body{
     width: 100%;
     min-height: 100vh;
-    background-color: #ffffff;
+    background-color: #fcf6e5;
 }
 header{
     height: 60px;
@@ -167,11 +167,14 @@ footer{
         height: 90px;
       }
       .recipe-container{
-        width: 700px;
+        width: 80%;
         margin: 0 auto;
       }
+      .ingredients{
+        width: 50%;
+      }
       .process{
-        margin-left: 70px;
+        margin-left: 12rem;
       }
      .Making{
         margin-left: 100px;
