@@ -26,6 +26,8 @@ header{
 }
 .nav-list:hover{
     cursor: pointer;
+    text-decoration: underline;
+    color: rgb(255, 118, 118);
 }
 nav ul li{
     list-style: none;
@@ -40,7 +42,7 @@ nav ul li{
     display: flex;
   }
 
-.nav-list{
+.nav-bar{
     display: none;
     flex-direction: column;
     background-color: #222121;
@@ -146,7 +148,7 @@ a{
     .menu-icon{
         display: none;
     }
-    .nav-list{
+    .nav-bar{
         /* display: block; */
         display: flex;
         flex-direction: row;
