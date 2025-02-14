@@ -86,7 +86,7 @@ nav ul li{
     font-size: 1rem;
     border: 1px solid rgb(245, 37, 9);
 }
-.search-box button a{
+.search-box a{
     text-decoration: none;
     padding: 10px;
     outline: none;
