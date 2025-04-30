@@ -1,11 +1,64 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const menuIcon = document.querySelector(".menu-icon");
-    const navList = document.querySelector(".nav-bar");
+// Toggle menu icon and navbar
+const menuIcon = document.querySelector('#menu-icon');
+const navBar = document.querySelector('.nav-bar');
 
-    menuIcon.addEventListener("click", () => {
-        navList.classList.toggle("active");
-    });
+menuIcon.addEventListener('click', () => {
+    navBar.classList.toggle('show-nav');
+    menuIcon.classList.toggle('active');
 });
 
-let footerText = document.querySelector("footer")
-footerText.textContent = "© 2025 all right reserved"
+// ===== Recipe Search =====
+const searchInput = document.querySelector('.search-box input');
+const recipeCards = document.querySelectorAll('.recipe-card');
+const recipeSection = document.querySelector('.recipe-section');
+
+let noResult = document.querySelector('.no-result');
+if (!noResult) {
+    noResult = document.createElement('div');
+    noResult.classList.add('no-result');
+    noResult.textContent = '😔 Sorry, no matching recipe found!';
+    noResult.style.textAlign = 'center';
+    noResult.style.fontSize = '20px';
+    noResult.style.color = 'red';
+    noResult.style.marginTop = '20px';
+    noResult.style.display = 'none';
+    recipeSection.parentElement.appendChild(noResult);
+}
+
+searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase().trim();
+    let found = false;
+
+    recipeCards.forEach(card => {
+        const title = card.querySelector('h2').textContent.toLowerCase();
+        if (title.includes(query)) {
+            card.style.display = 'flex';
+            found = true;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    noResult.style.display = found ? 'none' : 'block';
+});
+
+
+
+
+
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});

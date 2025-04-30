@@ -1,15 +1,15 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
-body{
+body {
     width: 100%;
     min-height: 100vh;
     background-color: #f8f8f8;
 }
-header{
+header {
     height: 60px;
     width: 100%;
     background: #222121;
@@ -17,79 +17,116 @@ header{
     display: flex;
     align-items: center;
 }
-.container{
-    width: 90%;
+.container {
+    width: 95%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+.logo {
+    font-size: 25px;
+}
 
-.nav-list.active {
-    display: flex;
-  }
+/* ===== Menu Icon ===== */
+.menu-icon {
+    display: block;
+    cursor: pointer;
+    z-index: 1001;
+    width: 30px;
+    height: 22px;
+    position: relative;
+}
+.menu-icon .bar {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+.menu-icon.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-icon.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
 
-.nav-bar{
+/* ===== Nav Bar ===== */
+/* ===== Nav Bar ===== */
+.nav-bar {
     display: none;
     flex-direction: column;
     background-color: #222121;
+    position: absolute;
+    top: 60px;
+    right: 0;  /* Navbar ko right side mein shift karna */
+    width: 100%;
+    padding: 20px;
+    z-index: 1000;
+    animation: slideDown 0.4s ease;
 }
-.nav-list:hover{
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.nav-bar li {
+    list-style: none;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 550;
+    color: #fff;
+}
+.nav-list:hover {
     cursor: pointer;
     text-decoration: underline;
     color: rgb(255, 118, 118);
 }
-nav ul li{
-    list-style: none;
-    display: inline;
-    margin-right: 20px;
-    font-weight: 550;
-}
-.logo{
-    font-size: 25px;
+.show-nav {
+    display: flex !important;
 }
 
-/* ........Hero section............ */
-.hero{
+/* ===== Hero Section ===== */
+.hero {
     width: 100%;
     height: auto;
-    background: url(images/heo-image.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: url(images/heo-image.jpg) no-repeat center/cover;
     color: #fff;
     text-align: center;
     padding: 140px 0;
     margin-bottom: 20px;
 }
-.hero h2{
+.hero h2 {
     font-size: 36px;
     margin-bottom: 10px;
 }
-.hero p{
+.hero p {
     font-size: 20px;
     margin-bottom: 10px;
 }
-.search-box{
+.search-box {
     max-width: 550px;
     margin: 15px auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.search-box input{
+.search-box input {
     width: 70%;
     padding: 10px;
     outline: none;
-    border: 0;
+    border: 1px solid rgb(245, 37, 9);
     border-radius: 5px 0 0 5px;
     font-size: 1rem;
-    border: 1px solid rgb(245, 37, 9);
 }
-.search-box a{
+.search-box button {
     text-decoration: none;
     padding: 10px;
-    outline: none;
     border: 0;
     border-radius: 0 5px 5px 0;
     font-size: 1rem;
@@ -98,50 +135,48 @@ nav ul li{
     cursor: pointer;
 }
 
-/* .........Recipe section............ */
-.recipes{
+/* ===== Recipes ===== */
+.recipes {
     padding: 20px 0;
 }
-.recipes h2{
+.recipes h2 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 28px;
 }
-.recipe-section{
+.recipe-section {
     width: 90%;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    column-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
-.recipe-card{
+.recipe-card {
     background: #fff;
-    margin: 30px 10px;
+    width: 270px;
+    flex-direction: column;
+    display: flex;
     border-radius: 8px;
     border: 1px solid #a8a5a5;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-.recipe-card:hover{
-    transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
 }
-.recipe-card img{
+.recipe-card:hover {
+    transform: scale(1.05);
+}
+.recipe-card img {
     width: 95%;
-    margin-left: 7.5px;
-    margin-top: 6px;
+    margin: 6px auto 0;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
 }
-.recipe-card h2{
-    font-size: 22px;
-    padding: 20px;
-}
-.recipe-card p{
+.recipe-card h2, .recipe-card p {
+    padding: 15px;
     font-size: 18px;
-    padding: 20px;
 }
-.recipe-card a{
+.recipe-card a {
     display: block;
     text-align: center;
     text-decoration: none;
@@ -150,36 +185,62 @@ nav ul li{
     padding: 15px 0;
     cursor: pointer;
 }
-footer{
+
+/* ===== Footer ===== */
+footer {
     background: #333;
     color: #fff;
     padding: 20px 0;
     text-align: center;
 }
-.menu-icon{
-    font-size: 24px;
-    /* padding: 20px; */
-    text-align: right;
-    cursor: pointer;
-    display: block;
-}
 
-/* .............media quary............ */
-@media only screen and (min-width: 600px){
-    .menu-icon{
+/* ===== Media Queries ===== */
+@media only screen and (min-width: 600px) {
+    .menu-icon {
         display: none;
     }
-    .nav-bar{
-        display: block;
-        display: flex;
+    .nav-bar {
+        display: flex !important;
         flex-direction: row;
+        position: static; /* Static position to make it inline */
+        background: none;
+        padding: 0;
+        justify-content: flex-end; /* This will align the navbar to the right */
+    }
+    .nav-bar li {
+        margin-right: 20px;
     }
 }
-@media only screen and (max-width: 600px){
-    .hero h2{
+@media only screen and (max-width: 600px) {
+    .hero h2 {
         font-size: 28px;
     }
-    .hero p{
+    .hero p {
         font-size: 15px;
     }
+}
+
+
+
+
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 30px;    /* distance from bottom */
+    right: 30px;     /* distance from right */
+    z-index: 100;
+    display: none;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #d32f2f;
 }
