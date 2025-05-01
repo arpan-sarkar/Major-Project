@@ -1,4 +1,4 @@
-// Toggle menu icon and navbar
+// ===== Toggle menu icon and navbar =====
 const menuIcon = document.querySelector('#menu-icon');
 const navBar = document.querySelector('.nav-bar');
 
@@ -6,6 +6,22 @@ menuIcon.addEventListener('click', () => {
     navBar.classList.toggle('show-nav');
     menuIcon.classList.toggle('active');
 });
+
+// Dropdown toggle for Recipes
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+const hasDropdown = document.querySelector('.has-dropdown');
+
+dropdownToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hasDropdown.classList.toggle('active');
+});
+
+// Close dropdown if clicked outside
+document.addEventListener('click', () => {
+    hasDropdown.classList.remove('active');
+});
+
+
 
 // ===== Recipe Search =====
 const searchInput = document.querySelector('.search-box input');
@@ -42,10 +58,7 @@ searchInput.addEventListener('input', () => {
     noResult.style.display = found ? 'none' : 'block';
 });
 
-
-
-
-
+// ===== Scroll to Top Button =====
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
 window.addEventListener("scroll", () => {
@@ -62,3 +75,6 @@ scrollToTopBtn.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+
+// ===== Dropdown toggle for Recipes item =====
+

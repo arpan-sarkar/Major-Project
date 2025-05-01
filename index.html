@@ -11,7 +11,7 @@
     <!-- .........Header section............ -->
     <header>
         <div class="container">
-          <div class="logo">The Fooide Haven</div>
+          <div class="logo">The Foodie Haven</div>
       
           <!-- Menu Icon -->
           <div class="menu-icon" id="menu-icon">
@@ -23,12 +23,26 @@
           <!-- Navigation List -->
           <ul class="nav-bar">
             <li class="nav-list">Home</li>
-            <li class="nav-list">About</li>
-            <li class="nav-list">Recipes</li>
-            <li class="nav-list">Contact</li>
+            <li class="nav-list"><a href="#about">About</a></li>
+            
+            <li class="nav-list has-dropdown">
+              <span class="dropdown-toggle">Recipes</span>
+              <ul class="dropdown-menu">
+                <li><a href="#">Indian</a></li>
+                <li><a href="#">Chinese</a></li>
+                <li><a href="#">Mexican</a></li>
+                <li><a href="#">Italian</a></li>
+              </ul>
+            </li>
+          
+            <li class="nav-list"><a href="#contact">Contact</a></li>
           </ul>
+          
+          
+  
         </div>
       </header>
+      
       
 
     <!-- .........Hero section............ -->
@@ -97,9 +111,75 @@
             </div>
         </div>
      </section>
+     <section id="recipes-categories">
+        <h2>Recipe Categories</h2>
+        <div class="cat-recipe-grid">
+          <div class="card">
+            <h3>Breakfast</h3>
+            <p>Start your day with energy-boosting recipes.</p>
+            <a href="#" target="_blank">View Recipe</a>
+          </div>
+          <div class="card">
+            <h3>Lunch</h3>
+            <p>Wholesome and satisfying mid-day meals.</p>
+            <a href="#" target="_blank">View Recipe</a>
+          </div>
+          <div class="card">
+            <h3>Dinner</h3>
+            <p>End your day with comfort food recipes.</p>
+            <a href="#" target="_blank">View Recipe</a>
+          </div>
+          <div class="card">
+            <h3>Desserts</h3>
+            <p>Sweet treats to indulge your taste buds.</p>
+            <a href="#" target="_blank">View Recipe</a>
+          </div>
+          <div class="card">
+            <h3>Starter</h3>
+            <p>Delicious bite-sized dish that teases your taste buds.</p>
+            <a href="#" target="_blank">View Recipe</a>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- .........About Section............ -->
+<section class="about" id="about">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About The Foodie Haven</h2>
+        <p>
+          Welcome to <strong>The Foodie Haven</strong> — your ultimate destination for mouth-watering recipes from around the world! Whether you're a beginner or a passionate home chef, we bring you a curated collection of Indian, Chinese, Mexican, Italian, and more cuisines to spice up your culinary journey.
+        </p>
+        <p>
+          Our goal is simple: to make cooking fun, easy, and accessible. With step-by-step guides and delicious visuals, we help you cook confidently and enjoy the art of food.
+        </p>
+      </div>
+      <!-- <div class="about-img">
+        <img src="images/about-foodie.jpg" alt="About The Foodie Haven">
+      </div> -->
+    </div>
+  </section>
+  
+  <section id="contact">
+    <h2>Contact</h2>
+    <form class="form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter Name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter Email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write Your message " rows="10" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
      <footer>
         <div>
-            <p>&copy; 2024 all right reserved</p>
+            <p>&copy; 2025 The Foodie Haven. All right reserved</p>
         </div>
      </footer>
      <button id="scrollToTopBtn" title="Go to top">↑</button>
