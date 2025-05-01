@@ -55,9 +55,7 @@ header{
 }
 
 /* ===== Nav Bar ===== */
-.logo {
-  font-size: 25px;
-}
+/* ===== Nav Bar ===== */
 .nav-bar {
   display: none;
   flex-direction: column;
@@ -71,41 +69,26 @@ header{
   animation: slideDown 0.4s ease;
 }
 
-.nav-bar.active {
-  display: flex;
-  flex-direction: row;
-  
-}
-
-
 @keyframes slideDown {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
-/* Remove list dots from navigation */
-.nav-bar ul {
+.nav-bar li {
   list-style: none;
-  padding-left: 0;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 550;
+  color: #fff;
 }
-
-.nav-list:hover{
+.nav-list:hover {
   cursor: pointer;
   text-decoration: underline;
   color: rgb(255, 118, 118);
 }
-nav ul li{
-  list-style: none;
-  display: inline;
-  margin-right: 20px;
-  font-weight: 550;
+.show-nav {
+  display: flex !important;
 }
-.logo{
-  font-size: 25px;
-}
-.nav-list.active{
-  display: flex;
-}
+
 
 /* Recipe Item */
 h1{
@@ -344,3 +327,143 @@ a{
   background-color: #d32f2f;
 }
 
+
+
+
+/* Positioning for dropdown */
+.has-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-toggle::after {
+  content: " ▼";
+  font-size: 12px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  border-radius: 5px;
+  padding: 0;
+  margin-top: 5px;
+  list-style: none;
+  min-width: 150px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* Show dropdown on active */
+.has-dropdown.active .dropdown-menu {
+  opacity: 1;
+  max-height: 500px;
+  pointer-events: auto;
+}
+
+/* Dropdown links */
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #555;
+}
+
+.nav-list a{
+  text-decoration: none;
+  color: #ffff;
+}
+
+
+
+.about {
+  background-color: #fefefe;
+  padding: 60px 20px;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1 1 55%;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.about-img {
+  flex: 1 1 40%;
+}
+
+.about-img img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+#contact{
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: #e67e22;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #cf711f;
+}
