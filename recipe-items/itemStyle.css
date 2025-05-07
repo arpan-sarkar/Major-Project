@@ -9,6 +9,9 @@ body{
   min-height: 100vh;
   background-color: #fff;
 }
+.logo {
+  font-size: 25px;
+}
 header{
   height: 60px;
   width: 100%;
@@ -16,6 +19,7 @@ header{
   color: #fff;
   display: flex;
   align-items: center;
+  position: fixed;
 }
 .container{
   width: 90%;
@@ -467,3 +471,19 @@ button {
 button:hover {
   background-color: #cf711f;
 }
+
+
+
+
+
+/* recipe section */
+.recipe-section {
+  padding: 60px 0px;
+  max-width: 900px;
+  margin: auto;
+}
+/* .recipe-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+} */

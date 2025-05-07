@@ -15,19 +15,19 @@ menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('active');
 });
 
-// Dropdown toggle for Recipes
-const dropdownToggle = document.querySelector('.dropdown-toggle');
-const hasDropdown = document.querySelector('.has-dropdown');
+// // Dropdown toggle for Recipes
+// const dropdownToggle = document.querySelector('.dropdown-toggle');
+// const hasDropdown = document.querySelector('.has-dropdown');
 
-dropdownToggle.addEventListener('click', (e) => {
-    e.stopPropagation();
-    hasDropdown.classList.toggle('active');
-});
+// dropdownToggle.addEventListener('click', (e) => {
+//     e.stopPropagation();
+//     hasDropdown.classList.toggle('active');
+// });
 
-// Close dropdown if clicked outside
-document.addEventListener('click', () => {
-    hasDropdown.classList.remove('active');
-});
+// // Close dropdown if clicked outside
+// document.addEventListener('click', () => {
+//     hasDropdown.classList.remove('active');
+// });
 
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 

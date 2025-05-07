@@ -10,12 +10,13 @@ body {
     background-color: #f8f8f8;
 }
 header {
-    height: 60px;
+    height: 80px;
     width: 100%;
     background: #222121;
     color: #fff;
     display: flex;
     align-items: center;
+    position: fixed;
 }
 .container {
     width: 95%;
@@ -160,11 +161,12 @@ header {
     border-radius: 8px;
     border: 1px solid #a8a5a5;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease-in-out;
-}
-.recipe-card:hover {
-    transform: scale(1.05);
+  }
+  .recipe-card:hover {
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); */
+  box-shadow: 0 10px 16px rgba(0,0,0,0.5);
+  transition: box-shadow 0.3s;
+    /* transform: scale(1.05); */
 }
 .recipe-card img {
     width: 95%;
@@ -286,61 +288,13 @@ footer {
     border-radius: 5px;
     width: 85px;
     margin: 0 auto;
+    margin-top: 17px;
   }
 
 
 
 
 
-/* Positioning for dropdown */
-.has-dropdown {
-    position: relative;
-    cursor: pointer;
-  }
-  
-  .dropdown-toggle::after {
-    content: " ▼";
-    font-size: 12px;
-  }
-  
-  /* Dropdown menu */
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    border-radius: 5px;
-    padding: 0;
-    margin-top: 5px;
-    list-style: none;
-    min-width: 150px;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    pointer-events: none;
-  }
-  
-  /* Show dropdown on active */
-  .has-dropdown.active .dropdown-menu {
-    opacity: 1;
-    max-height: 500px;
-    pointer-events: auto;
-  }
-  
-  /* Dropdown links */
-  .dropdown-menu li a {
-    display: block;
-    padding: 10px 15px;
-    color: #fff;
-    text-decoration: none;
-    transition: background 0.3s;
-  }
-  
-  .dropdown-menu li a:hover {
-    background-color: #555;
-  }
 
   .nav-list a{
     text-decoration: none;
