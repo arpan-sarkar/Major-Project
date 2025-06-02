@@ -7,22 +7,6 @@ menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('active');
 });
 
-// // Dropdown toggle for Recipes
-// const dropdownToggle = document.querySelector('.dropdown-toggle');
-// const hasDropdown = document.querySelector('.has-dropdown');
-
-// dropdownToggle.addEventListener('click', (e) => {
-//     e.stopPropagation();
-//     hasDropdown.classList.toggle('active');
-// });
-
-// // Close dropdown if clicked outside
-// document.addEventListener('click', () => {
-//     hasDropdown.classList.remove('active');
-// });
-
-
-
 // ===== Recipe Search =====
 const searchInput = document.querySelector('.search-box input');
 const recipeCards = document.querySelectorAll('.recipe-card');
@@ -146,7 +130,8 @@ async function initializeRecipes() {
     'recipe_category/desserts/dessert.html',
     'recipe_category/dinner/dinner.html',
     'recipe_category/lunch/lunch.html',
-    'recipe_category/starter/starter.html'
+    'recipe_category/starter/starter.html',
+    'recipe_category/soft-drinks/soft-drinks.html'
   ];
 
   allRecipes = await loadFromFiles(categoryFiles);
