@@ -1,3 +1,5 @@
+console.log('Script loaded successfully!');
+
 // ===== Toggle menu icon and navbar =====
 const menuIcon = document.querySelector('#menu-icon');
 const navBar = document.querySelector('.nav-bar');
