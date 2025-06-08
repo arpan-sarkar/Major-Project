@@ -201,3 +201,10 @@ function setupSearch() {
 }
 
 window.addEventListener('DOMContentLoaded', initializeRecipes);
+
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("loader");
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 2000); // 2 seconds delay before hiding
+  });
