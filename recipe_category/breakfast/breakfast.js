@@ -74,7 +74,11 @@ scrollToTopBtn.addEventListener("click", () => {
     const modal = document.getElementById("welcomeModal");
     const closeBtn = document.querySelector(".close-btn");
 
-    modal.style.display = "flex"; // show modal
+    
+    setTimeout(() => {
+        modal.style.display = "flex"; // show modal
+    
+    }, 3000);
 
     closeBtn.onclick = function () {
       modal.style.display = "none";
